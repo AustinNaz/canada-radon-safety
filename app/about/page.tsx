@@ -19,7 +19,7 @@ export default function About() {
           <div>
             <h3 className="font-bold">Our Vision</h3>
             <p>
-              To be Canda's leading radon mitigation service provider, ensuring
+              To be Canda&apos;s leading radon mitigation service provider, ensuring
               safe indoor air for future generations. Through innovation,
               education, and high-quality service, we strive to reduce radon
               exposure and create healthier living and working environments.

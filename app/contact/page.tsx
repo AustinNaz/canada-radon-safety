@@ -15,7 +15,7 @@ export default function Contact() {
           </form>
           <div className="w-full lg:w-1/3 text-white space-y-3">
             <h2 className="text-2xl font-semibold">Have Questions or Ready to Take Action?</h2>
-            <p className="text-2xl font-bold text-[#00384a]">We’re Here to Help!</p>
+            <p className="text-2xl font-bold text-[#00384a]">We&apos;re Here to Help!</p>
             <br />
             <br />
             <p><strong>Email:</strong> info@radonca.ca</p>
@@ -24,8 +24,8 @@ export default function Contact() {
             <div>
               <strong>Operating Hours:</strong>
               <ul className="text-sm list-disc list-inside">
-                <li>Mon–Fri: 9:00 AM – 6:00 PM</li>
-                <li>Sat: 10:00 AM – 4:00 PM</li>
+                <li>Mon&ndash;Fri: 9:00 AM &ndash; 6:00 PM</li>
+                <li>Sat: 10:00 AM &ndash; 4:00 PM</li>
                 <li>Sun: Closed</li>
               </ul>
             </div>
