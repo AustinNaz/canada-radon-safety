@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function WhatIsRadon() {
   return (
-    <section className="bg-white text-[#00384a] py-16 px-6 text-center">
+    <section className="bg-white text-[#00384a] py-16 px-6 text-center min-h-screen pt-24">
       <h2 className="text-3xl font-bold text-orange-600 mb-1">
         WHAT IT IS RADON?
       </h2>
@@ -18,13 +20,22 @@ export default function WhatIsRadon() {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div className="bg-gray-100 p-6 rounded">
+        <div className="relative bg-gray-100 p-6 rounded">
+          <div className="absolute -top-10 left-0 w-16 h-16">
+            <Image
+              src="/lung.png"
+              alt="Lung Icon"
+              width={64}
+              height={64}
+              className="mx-auto"
+            />
+          </div>
           <h4 className="text-orange-500 font-semibold mb-2">
             Impact on Health
           </h4>
           <p className="text-sm text-left">
             Radon is a radioactive gas and the
-            <strong>second leading cause of lung cancer</strong> after smoking,
+            <strong> second leading cause of lung cancer</strong> after smoking,
             responsible for thousands of deaths annually.
           </p>
           <br />
@@ -33,7 +44,16 @@ export default function WhatIsRadon() {
             increasing cancer risk, especially for smokers.
           </p>
         </div>
-        <div className="bg-gray-100 p-6 rounded">
+        <div className="relative bg-gray-100 p-6 rounded">
+          <div className="absolute -top-10 left-0 w-16 h-16">
+            <Image
+              src="/regulations.png"
+              alt="Regulations Icon"
+              width={64}
+              height={64}
+              className="mx-auto"
+            />
+          </div>
           <h4 className="text-orange-500 font-semibold mb-2">
             Regulations and Statistics
           </h4>
@@ -49,7 +69,16 @@ export default function WhatIsRadon() {
             homes.
           </p>
         </div>
-        <div className="bg-gray-100 p-6 rounded">
+        <div className="relative bg-gray-100 p-6 rounded">
+          <div className="absolute -top-10 left-0 w-16 h-16">
+            <Image
+              src="/house.png"
+              alt="House Icon"
+              width={60}
+              height={60}
+              className="mx-auto"
+            />
+          </div>
           <h4 className="text-orange-500 font-semibold mb-2">
             How Radon Enters Your Home?
           </h4>

@@ -7,9 +7,9 @@ export default function Services() {
         OUR SERVICES
       </h2>
       <div className="flex flex-col md:flex-col lg:flex-row gap-8 items-center justify-center">
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 flex justify-end">
           <Image
-            src="/images/services.jpg"
+            src="/services_image.png"
             alt="Services"
             width={600}
             height={400}
