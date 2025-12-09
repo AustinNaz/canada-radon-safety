@@ -1,12 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -16,13 +19,22 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
+  const handleNav = (sectionId: string) => {
+    if (pathname === "/" || pathname === "/#") {
+      scrollToSection(sectionId);
+    } else {
+      router.push(`/#${sectionId}`);
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <nav className="bg-orange-500 text-white px-4 py-3 z-50 fixed w-full">
       <div className="flex flex-wrap justify-between items-center w-full">
         <div className="font-bold text-lg">
           <button
             className="flex items-center gap-2 max-w-full overflow-hidden"
-            onClick={() => scrollToSection('home')}
+            onClick={() => handleNav('home')}
           >
             <Image
               src="/Horizontal Logo.png"
@@ -50,7 +62,7 @@ export default function Navbar() {
         <ul className="hidden lg:flex gap-4 text-sm items-center">
           <li>
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => handleNav('home')}
               className="hover:text-gray-200 transition-colors"
             >
               Home
@@ -58,7 +70,7 @@ export default function Navbar() {
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('learn')}
+              onClick={() => handleNav('learn')}
               className="hover:text-gray-200 transition-colors"
             >
               Learn
@@ -66,15 +78,23 @@ export default function Navbar() {
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => handleNav('services')}
               className="hover:text-gray-200 transition-colors"
             >
               Services
             </button>
           </li>
           <li>
+            <Link
+              href="/products"
+              className="hover:text-gray-200 transition-colors"
+            >
+              Products
+            </Link>
+          </li>
+          <li>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => handleNav('about')}
               className="hover:text-gray-200 transition-colors"
             >
               About
@@ -82,7 +102,7 @@ export default function Navbar() {
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNav('contact')}
               className="hover:text-gray-200 transition-colors"
             >
               Contact Us
@@ -99,7 +119,7 @@ export default function Navbar() {
         <ul className="flex flex-col gap-3 mt-4 text-sm lg:hidden">
           <li>
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => handleNav('home')}
               className="hover:text-gray-200 transition-colors"
             >
               Home
@@ -107,7 +127,7 @@ export default function Navbar() {
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('learn')}
+              onClick={() => handleNav('learn')}
               className="hover:text-gray-200 transition-colors"
             >
               Learn
@@ -115,15 +135,24 @@ export default function Navbar() {
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => handleNav('services')}
               className="hover:text-gray-200 transition-colors"
             >
               Services
             </button>
           </li>
           <li>
+            <Link
+              href="/products"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-gray-200 transition-colors"
+            >
+              Products
+            </Link>
+          </li>
+          <li>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => handleNav('about')}
               className="hover:text-gray-200 transition-colors"
             >
               About
@@ -131,7 +160,7 @@ export default function Navbar() {
           </li>
           <li>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNav('contact')}
               className="hover:text-gray-200 transition-colors"
             >
               Contact Us

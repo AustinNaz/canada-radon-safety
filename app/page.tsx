@@ -18,15 +18,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/60 z-10" />
 
         {/* Content */}
-        <div className="absolute z-20 top-[60%] left-8 max-w-xl text-[#00384a] transform -translate-y-1/2">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+        <div className="absolute z-20 top-[60%] left-8 max-w-2xl text-[#00384a] transform -translate-y-1/2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Protect Your Home and Family from{" "}
             <span className="text-[#004d71]">Radon</span>
           </h1>
-          <h2 className="text-xl sm:text-2xl mt-2 font-semibold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl mt-3 font-semibold">
             Breathe Safe Today!
           </h2>
-          <p className="mt-4 text-sm sm:text-base">
+          <p className="mt-5 text-base sm:text-lg md:text-xl max-w-xl">
             Learn how radon affects your health and how to keep your home safe.
           </p>
           <a
@@ -41,15 +41,15 @@ export default function Home() {
       {/* What is Radon Section */}
       <section
         id="learn"
-        className="bg-white text-[#00384a] px-6 text-center pt-32 pb-8"
+        className="bg-white text-[#00384a] px-6 text-center pt-32 pb-8 min-h-screen flex flex-col justify-center"
       >
-        <h2 className="text-3xl font-bold text-orange-600 mb-1">
+        <h2 className="text-3xl lg:text-4xl font-bold text-orange-600 mb-1">
           WHAT IT IS RADON?
         </h2>
-        <h3 className="text-xl font-semibold mb-6">
+        <h3 className="text-xl lg:text-2xl font-semibold mb-6">
           Protect Your Home and Health Today.
         </h3>
-        <p className="max-w-3xl mx-auto mb-12 text-sm text-gray-800">
+        <p className="max-w-3xl mx-auto mb-12 text-base md:text-lg text-gray-800">
           Radon is a naturally occurring radioactive gas that forms from the
           decay of uranium in soil, rock, and water.
           <strong>It is colorless, odorless, and tasteless</strong>, making it
@@ -70,16 +70,16 @@ export default function Home() {
                 className="mx-auto"
               />
             </div>
-            <h4 className="text-orange-500 font-semibold mb-2">
+            <h4 className="text-orange-500 font-semibold mb-2 text-lg">
               Impact on Health
             </h4>
-            <p className="text-sm text-left">
+            <p className="text-sm md:text-base text-left">
               Radon is a radioactive gas and the
               <strong> second leading cause of lung cancer</strong> after
               smoking, responsible for thousands of deaths annually.
             </p>
             <br />
-            <p className="text-sm text-left">
+            <p className="text-sm md:text-base text-left">
               Prolonged exposure to high radon levels damages lung tissue,
               increasing cancer risk, especially for smokers.
             </p>
@@ -94,16 +94,16 @@ export default function Home() {
                 className="mx-auto"
               />
             </div>
-            <h4 className="text-orange-500 font-semibold mb-2">
+            <h4 className="text-orange-500 font-semibold mb-2 text-lg">
               Regulations and Statistics
             </h4>
-            <p className="text-sm text-left">
+            <p className="text-sm md:text-base text-left">
               Radon is a significant issue in Canada due to its geology and
               climate, with <strong>7% of Canadian Homes</strong> having radon
               levels above the national guideline of 200 Bq/m³.
             </p>
             <br />
-            <p className="text-sm text-left">
+            <p className="text-sm md:text-base text-left">
               Health Canada actively promotes radon testing and mitigation, and
               the National Building Code includes radon reduction measures for
               new homes.
@@ -119,15 +119,15 @@ export default function Home() {
                 className="mx-auto"
               />
             </div>
-            <h4 className="text-orange-500 font-semibold mb-2">
+            <h4 className="text-orange-500 font-semibold mb-2 text-lg">
               How Radon Enters Your Home?
             </h4>
-            <p className="text-sm text-left">
+            <p className="text-sm md:text-base text-left">
               Radon seeps into homes through cracks in foundations, gaps around
               pipes, sump pumps, and construction joints.
             </p>
             <br />
-            <p className="text-sm text-left">
+            <p className="text-sm md:text-base text-left">
               It originates from the natural decay of uranium in soil and rock,
               moving upward into buildings due to pressure differences.
             </p>
@@ -145,8 +145,11 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="bg-orange-500 text-black p-10 pt-24">
-        <h2 className="text-center text-2xl font-bold text-white mb-6">
+      <section
+        id="services"
+        className="bg-orange-500 text-black p-10 pt-24 min-h-screen flex flex-col justify-center"
+      >
+        <h2 className="text-center text-2xl lg:text-3xl font-bold text-white mb-6">
           OUR SERVICES
         </h2>
         <div className="flex flex-col md:flex-col lg:flex-row gap-8 items-center justify-center">
@@ -161,12 +164,12 @@ export default function Home() {
           </div>
           <div className="w-full lg:w-1/2 space-y-8">
             <div>
-              <h3 className="text-lg font-bold">Radon Mitigation</h3>
-              <p className="mt-1">
+              <h3 className="text-lg lg:text-xl font-bold">Radon Mitigation</h3>
+              <p className="mt-1 text-base lg:text-lg">
                 Our professional radon mitigation services ensure your home is
                 safe from harmful radon gas.
               </p>
-              <p className="mt-1">
+              <p className="mt-1 text-base lg:text-lg">
                 We design and install customized systems to reduce radon levels
                 below safety guidelines.
               </p>
@@ -178,8 +181,8 @@ export default function Home() {
               </a>
             </div>
             <div>
-              <h3 className="text-lg font-bold">Radon Testing</h3>
-              <p className="mt-1">
+              <h3 className="text-lg lg:text-xl font-bold">Radon Testing</h3>
+              <p className="mt-1 text-base lg:text-lg">
                 Ensure your home&apos;s safety with our professional radon
                 testing services. Using advanced equipment, we accurately
                 measure radon levels to determine if your home is at risk.
@@ -196,8 +199,13 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-[#00384a] text-white py-12 px-6 pt-24">
-        <h2 className="text-center text-2xl font-bold mb-8">ABOUT US</h2>
+      <section
+        id="about"
+        className="bg-[#00384a] text-white py-12 px-6 pt-24 min-h-screen flex flex-col justify-center"
+      >
+        <h2 className="text-center text-2xl lg:text-3xl font-bold mb-8">
+          ABOUT US
+        </h2>
         <div className="flex flex-col md:flex-col lg:flex-row gap-10 items-center max-w-6xl mx-auto px-4">
           <div className="flex-1 space-y-4">
             <div>
@@ -263,9 +271,9 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="bg-orange-500 py-12 px-4 text-black pt-24"
+        className="bg-orange-500 py-12 px-4 text-black pt-24 min-h-screen flex flex-col justify-center"
       >
-        <h2 className="text-center text-2xl font-bold text-white mb-6">
+        <h2 className="text-center text-2xl lg:text-3xl font-bold text-white mb-6">
           CONTACT US
         </h2>
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row px-4 gap-8">
