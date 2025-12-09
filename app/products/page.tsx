@@ -13,10 +13,6 @@ export default function ProductsPage() {
           <h1 className="text-3xl lg:text-4xl font-bold mt-2">
             Radon safety storefront
           </h1>
-          <p className="mt-4 text-base lg:text-lg text-gray-700 max-w-3xl mx-auto">
-            Pick a test kit, monitor, or mitigation hardware. Add the essentials
-            to your plan and reach out when you&apos;re ready to install.
-          </p>
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -47,9 +43,6 @@ export default function ProductsPage() {
                 <p className="text-sm text-gray-700">
                   {product.description}
                 </p>
-                <span className="mt-1 text-sm font-semibold text-[#004d71] group-hover:underline">
-                  View product
-                </span>
               </div>
             </Link>
           ))}
