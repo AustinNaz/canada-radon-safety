@@ -4,19 +4,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { useState } from "react";
+import { use, useState } from "react";
 import { products } from "../data";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export default function ProductDetail({ params }: Props) {
-  const product = products.find((item) => item.slug === params.slug);
+  const { slug } = use(params);
+  const [index, setIndex] = useState(0);
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) return notFound();
 
-  const [index, setIndex] = useState(0);
   const total = product.images.length;
 
   const goPrev = () => setIndex((i) => (i - 1 + total) % total);
