@@ -8,13 +8,21 @@ import Image from "next/image";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMenuOpen(false);
+  };
+
   return (
-    <nav className="bg-orange-500 text-white px-4 py-3 z-20 absolute w-full">
+    <nav className="bg-orange-500 text-white px-4 py-3 z-50 fixed w-full">
       <div className="flex flex-wrap justify-between items-center w-full">
         <div className="font-bold text-lg">
-          <Link
+          <button
             className="flex items-center gap-2 max-w-full overflow-hidden"
-            href="/"
+            onClick={() => scrollToSection('home')}
           >
             <Image
               src="/Horizontal Logo.png"
@@ -26,7 +34,7 @@ export default function Navbar() {
               <div className="font-bold text-base">CANADA RADON</div>
               <span className="block font-normal">SAFETY SOLUTIONS</span>
             </div> */}
-          </Link>
+          </button>
         </div>
 
         {/* Mobile hamburger button */}
@@ -41,19 +49,44 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex gap-4 text-sm items-center">
           <li>
-            <Link href="/">Home</Link>
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="hover:text-gray-200 transition-colors"
+            >
+              Home
+            </button>
           </li>
           <li>
-            <Link href="/what-is-radon">Learn</Link>
+            <button 
+              onClick={() => scrollToSection('learn')}
+              className="hover:text-gray-200 transition-colors"
+            >
+              Learn
+            </button>
           </li>
           <li>
-            <Link href="/services">Services</Link>
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="hover:text-gray-200 transition-colors"
+            >
+              Services
+            </button>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="hover:text-gray-200 transition-colors"
+            >
+              About
+            </button>
           </li>
           <li>
-            <Link href="/contact">Contact Us</Link>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="hover:text-gray-200 transition-colors"
+            >
+              Contact Us
+            </button>
           </li>
           <li className="bg-blue-900 px-3 py-1 rounded whitespace-nowrap">
             1-800-000-0000
@@ -65,29 +98,44 @@ export default function Navbar() {
       {menuOpen && (
         <ul className="flex flex-col gap-3 mt-4 text-sm lg:hidden">
           <li>
-            <Link href="/" onClick={() => setMenuOpen(false)}>
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="hover:text-gray-200 transition-colors"
+            >
               Home
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="/what-is-radon" onClick={() => setMenuOpen(false)}>
+            <button 
+              onClick={() => scrollToSection('learn')}
+              className="hover:text-gray-200 transition-colors"
+            >
               Learn
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="/services" onClick={() => setMenuOpen(false)}>
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="hover:text-gray-200 transition-colors"
+            >
               Services
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="/about" onClick={() => setMenuOpen(false)}>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="hover:text-gray-200 transition-colors"
+            >
               About
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="/contact" onClick={() => setMenuOpen(false)}>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="hover:text-gray-200 transition-colors"
+            >
               Contact Us
-            </Link>
+            </button>
           </li>
           <li className="bg-blue-900 px-3 py-2 rounded text-center">
             1-800-000-0000
